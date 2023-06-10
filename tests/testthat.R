@@ -1,5 +1,5 @@
 library(testthat)
-library(tailfindr_R10)
+library(tailfindrR10)
 
-test_check("tailfindr_R10")
+test_check("tailfindrR10")
 
