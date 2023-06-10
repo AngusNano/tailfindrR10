@@ -1,4 +1,4 @@
-Package: tailfindr
+Package: tailfindr_R10
 Type: Package
 Title: Poly(A) Tail Length Estimator for Oxford Nanopore RNA and DNA Reads
 Version: 1.4
