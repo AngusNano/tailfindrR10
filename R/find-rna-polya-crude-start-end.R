@@ -20,7 +20,7 @@ find_rna_polya_crude_start_end <- function(rle_lengths,
         # followed by a peak in rle instersections
         if (rle_lengths[i] > trough_threshold &&
             !rle_values[i] && rle_values[i+1])  {
-            polya_crude_start <- rle_indices[i]
+            polya_crude_start <- rle_indices[i] - 20
             polya_crude_end <- rle_indices[i+1]
             break
         }
