@@ -39,10 +39,10 @@ find_dna_tail_per_read <- function(file_path = NA,
                                    multifast5 = FALSE,
                                    basecalled_with = 'guppy',
                                    model = 'standard',
-                                   SPIKE_THRESHOLD = NA,
-                                   MOVING_WINDOW_SIZE = NA,
-                                   MAX_GAP = NA,
-                                   SLOPE_THRESHOLD = NA,
+                                   #SPIKE_THRESHOLD = NA,
+                                   #MOVING_WINDOW_SIZE = NA,
+                                   #MAX_GAP = NA,
+                                   #SLOPE_THRESHOLD = NA,
                                    ...) {
 
     do_plots <- ifelse(save_plots | show_plots, TRUE, FALSE)
@@ -56,10 +56,10 @@ find_dna_tail_per_read <- function(file_path = NA,
                                    model= model,
                                    plotting_library = plotting_library,
                                    read_id_fast5_file = read_id_fast5_file,
-                                   SPIKE_THRESHOLD = spike_threshold_set,
-                                   MOVING_WINDOW_SIZE = moving_window_size_set,
-                                   MAX_GAP = tail_gap,
-                                   SLOPE_THRESHOLD = slope_threshold_set,
+                                   #SPIKE_THRESHOLD = spike_threshold_set,
+                                   #MOVING_WINDOW_SIZE = moving_window_size_set,
+                                   #MAX_GAP = tail_gap,
+                                   #SLOPE_THRESHOLD = slope_threshold_set,
                                    ...)
 
     # first read the data and find the tailtype
@@ -93,12 +93,12 @@ find_dna_tail_per_read <- function(file_path = NA,
     # Empirical parameters
     #POLY_T_CNDA_THRESHOLD <- 0.20
     #POLY_A_CNDA_THRESHOLD <- 0.31
-    ##SPIKE_THRESHOLD <- 2.0
-    ##MOVING_WINDOW_SIZE <- 30
-    ##MAX_GAP_BETWEEN_TAILS <- 240 * samples_per_nt
-    MAX_GAP_BETWEEN_TAILS <- MAX_GAP * samples_per_nt
+    SPIKE_THRESHOLD <- 2.0
+    MOVING_WINDOW_SIZE <- 30
+    MAX_GAP_BETWEEN_TAILS <- 240 * samples_per_nt
+    #MAX_GAP_BETWEEN_TAILS <- MAX_GAP * samples_per_nt
     #SEC_TAIL_MIN_SIZE <- read_data$samples_per_nt * 15
-    ##SLOPE_THRESHOLD <- 0.20
+    SLOPE_THRESHOLD <- 0.20
 
     # Z-normalize the data
     raw_data <- read_data$raw_data
