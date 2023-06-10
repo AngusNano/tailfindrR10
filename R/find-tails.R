@@ -131,10 +131,10 @@ find_tails <- function(fast5_dir,
                        save_plots = FALSE,
                        plot_debug_traces = FALSE,
                        plotting_library = 'rbokeh',
-                       spike_threshold_set = 2,
-                       moving_window_size_set = 30,
-                       tail_gap = 240,
-                       slope_threshold_set = 0.2,
+                       #spike_threshold_set = 2,
+                       #moving_window_size_set = 30,
+                       #tail_gap = 240,
+                       #slope_threshold_set = 0.2,
                        ...) {
 
     plot_debug <- plot_debug_traces
@@ -435,11 +435,11 @@ find_tails <- function(fast5_dir,
                                                                              multifast5 = multifast5,
                                                                              basecalled_with = basecalled_with,
                                                                              model = model,
-                                                                             dna_opts = dna_opts,
-                                                                             spike_threshold_set = spike_threshold_set,
-                                                                             moving_window_size_set = moving_window_size_set,
-                                                                             tail_gap = tail_gap,
-                                                                             slope_threshold_set = slope_threshold_set)
+                                                                             dna_opts = dna_opts)
+                                                                             #spike_threshold_set = spike_threshold_set,
+                                                                             #moving_window_size_set = moving_window_size_set,
+                                                                             #tail_gap = tail_gap,
+                                                                             #slope_threshold_set = slope_threshold_set)
                                                   },
                                                   error=function(e){
                                                       ls <- list(read_id = riff$read_id,
@@ -555,11 +555,11 @@ find_tails <- function(fast5_dir,
                                                                             multifast5 = multifast5,
                                                                             basecalled_with = basecalled_with,
                                                                             model = model,
-                                                                            dna_opts = dna_opts,
-                                                                            spike_threshold_set = spike_threshold_set,
-                                                                            moving_window_size_set = moving_window_size_set,
-                                                                            tail_gap = tail_gap,
-                                                                            slope_threshold_set = slope_threshold_set)
+                                                                            dna_opts = dna_opts)
+                                                                            #spike_threshold_set = spike_threshold_set,
+                                                                            #moving_window_size_set = moving_window_size_set,
+                                                                            #tail_gap = tail_gap,
+                                                                            #slope_threshold_set = slope_threshold_set)
                                                  },
                                                  error=function(e){
                                                      ls <- list(read_id = NA,
