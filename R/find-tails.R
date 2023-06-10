@@ -435,7 +435,11 @@ find_tails <- function(fast5_dir,
                                                                              multifast5 = multifast5,
                                                                              basecalled_with = basecalled_with,
                                                                              model = model,
-                                                                             dna_opts = dna_opts)
+                                                                             dna_opts = dna_opts,
+                                                                             spike_threshold_set = spike_threshold_set,
+                                                                             moving_window_size_set = moving_window_size_set,
+                                                                             tail_gap = tail_gap,
+                                                                             slope_threshold_set = slope_threshold_set)
                                                   },
                                                   error=function(e){
                                                       ls <- list(read_id = riff$read_id,
@@ -551,7 +555,11 @@ find_tails <- function(fast5_dir,
                                                                             multifast5 = multifast5,
                                                                             basecalled_with = basecalled_with,
                                                                             model = model,
-                                                                            dna_opts = dna_opts)
+                                                                            dna_opts = dna_opts,
+                                                                            spike_threshold_set = spike_threshold_set,
+                                                                            moving_window_size_set = moving_window_size_set,
+                                                                            tail_gap = tail_gap,
+                                                                            slope_threshold_set = slope_threshold_set)
                                                  },
                                                  error=function(e){
                                                      ls <- list(read_id = NA,
