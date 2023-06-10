@@ -162,7 +162,7 @@ find_dna_tail_per_read <- function(file_path = NA,
     if (!has_precise_boundary) {
         while (k < 20) {
             if ((slope[k] < SLOPE_THRESHOLD) & (slope[k] > -SLOPE_THRESHOLD) &
-                (mean_data[k] < SLOPE_THRESHOLD+0.1) & (mean_data[k] > 0)) { # changed it from mean_data[k] > -SLOPE_THRESHOLD
+                (mean_data[k] < SLOPE_THRESHOLD+0.4) & (mean_data[k] > 0)) { # changed it from mean_data[k] > -SLOPE_THRESHOLD
                 precise_tail_start <- (k-1)*window_size + tail_start
                 break
             }
@@ -229,7 +229,7 @@ find_dna_tail_per_read <- function(file_path = NA,
                     break
                 }
                 #if ((slope[j] > SLOPE_THRESHOLD) | (slope[j] < -SLOPE_THRESHOLD)) {
-                if ((mean_data[j] > SLOPE_THRESHOLD+0.1) | (mean_data[j] < -SLOPE_THRESHOLD-0.1)) {
+                if ((mean_data[j] > SLOPE_THRESHOLD+0.4) | (mean_data[j] < -SLOPE_THRESHOLD-0.4)) {
                     small_glitch_count <- 0
                     j <- j + 1
                 } else {
