@@ -131,6 +131,10 @@ find_tails <- function(fast5_dir,
                        save_plots = FALSE,
                        plot_debug_traces = FALSE,
                        plotting_library = 'rbokeh',
+                       spike_threshold_set = 2,
+                       moving_window_size_set = 30,
+                       tail_gap = 240,
+                       slope_threshold_set = 0.2,
                        ...) {
 
     plot_debug <- plot_debug_traces
