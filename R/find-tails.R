@@ -160,13 +160,13 @@ find_tails <- function(fast5_dir,
     }
 
     # display console messages
-    version <- utils::packageDescription("tailfindr")$Version
+    version <- utils::packageDescription("tailfindr_R10")$Version
     cat(cli::rule(left=''), '\n', sep = "")
-    cat(cli::rule(left=paste("Started tailfindr ", '(version ', version, ')', sep='')), '\n', sep = "")
+    cat(cli::rule(left=paste("Started tailfindr_R10 ", '(version ', version, ')', sep='')), '\n', sep = "")
     cat(cli::rule(left=''), '\n',  sep = "")
 
     # display the user-specified parameters
-    cat(paste(cli::symbol$menu, ' You have configured tailfindr as following:', '\n', sep=''))
+    cat(paste(cli::symbol$menu, ' You have configured tailfindr_R10 as following:', '\n', sep=''))
     cat(paste(cli::symbol$pointer, ' fast5_dir:         ', fast5_dir, '\n', sep=''))
     cat(paste(cli::symbol$pointer, ' save_dir:          ', save_dir, '\n', sep=''))
     cat(paste(cli::symbol$pointer, ' csv_filename:      ', csv_filename, '\n', sep=''))
