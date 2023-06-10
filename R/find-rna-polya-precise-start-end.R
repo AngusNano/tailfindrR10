@@ -15,8 +15,9 @@ find_rna_polya_precise_start_end <- function(truncated_data,
                                              save_plots,
                                              show_plots){
 
-    crude_start <- crude_polya_boundries$start
+    crude_startx <- crude_polya_boundries$start
     crude_end <- crude_polya_boundries$end
+    crude_start <- crude_startx - 2000
 
     precise_start <- NA
     precise_end <- NA
