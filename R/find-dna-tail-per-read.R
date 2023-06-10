@@ -98,7 +98,7 @@ find_dna_tail_per_read <- function(file_path = NA,
     MAX_GAP_BETWEEN_TAILS <- 240 * samples_per_nt
     #MAX_GAP_BETWEEN_TAILS <- MAX_GAP * samples_per_nt
     #SEC_TAIL_MIN_SIZE <- read_data$samples_per_nt * 15
-    SLOPE_THRESHOLD <- 0.20
+    SLOPE_THRESHOLD <- 0.10
 
     # Z-normalize the data
     raw_data <- read_data$raw_data
