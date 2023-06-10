@@ -94,7 +94,7 @@ find_dna_tail_per_read <- function(file_path = NA,
     #POLY_T_CNDA_THRESHOLD <- 0.20
     #POLY_A_CNDA_THRESHOLD <- 0.31
     SPIKE_THRESHOLD <- 2.0
-    MOVING_WINDOW_SIZE <- 30
+    MOVING_WINDOW_SIZE <- 50
     MAX_GAP_BETWEEN_TAILS <- 240 * samples_per_nt
     #MAX_GAP_BETWEEN_TAILS <- MAX_GAP * samples_per_nt
     #SEC_TAIL_MIN_SIZE <- read_data$samples_per_nt * 15
